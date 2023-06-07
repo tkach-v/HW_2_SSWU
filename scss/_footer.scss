@@ -1,0 +1,167 @@
+@use "consts.scss" as consts;
+@use "mixins" as mixins;
+
+.footer {
+  position: relative;
+  overflow: hidden;
+
+  // add decoration ellipse to footer
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 475px;
+    height: 495px;
+    background: #D5AEE4;
+    opacity: 0.8;
+    filter: blur(75px);
+    transform: matrix(-1, 0, 0, 1, 0, 0) translate(-80%, 85%);
+  }
+}
+
+.footer__inner {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #5E6282;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1190px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+// style "about company" section
+.footer__company {
+  max-width: 210px;
+}
+
+.footer__logo {
+  font-size: 2.75rem;
+  line-height: 1.5em;
+  color: #181E4B;
+  text-decoration: none;
+}
+
+.footer__company-desc {
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+}
+
+
+// style "navigation" section
+.footer__nav {
+  display: flex;
+  gap: 4.5rem;
+  margin-top: 1.3125rem;
+}
+
+.footer__nav-header {
+  font-weight: 700;
+  font-size: 1.3125rem;
+  line-height: 1.25em;
+  color: #080809;
+  margin-bottom: 1.5em;
+}
+
+.footer__nav-list-item {
+  font-size: 1.125rem;
+  line-height: 1.25em;
+  margin-bottom: 0.66em;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+// style "social-media" section
+.footer__social-media {
+  margin-top: 2rem;
+}
+
+.footer__social-media-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.footer__social-media-text {
+  font-size: 1.25rem;
+  line-height: 1.25em;
+  letter-spacing: 0.005em;
+  margin-top: 1.75em;
+  margin-bottom: 0.8em;
+}
+
+.footer__download-links {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.footer__copyrights {
+  font-size: 0.875rem;
+  line-height: 1.25em;
+  margin: 5.5em 0;
+}
+
+.footer__nav-list-item,
+.footer__social-media-link-wrapper,
+.footer__download-link-wrapper {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    @include mixins.scale-and-colorize-item($scale: 1.2, $color: #000000)
+  }
+}
+
+// do adaptive
+@media (max-width: 992px) {
+  .footer {
+    background-color: #FFF1DA;
+    &::after {
+      display: none;
+    }
+  }
+
+  .footer__inner {
+    padding-top: 0.8125rem;
+  }
+
+  .footer__content {
+    flex-direction: column;
+  }
+
+  .footer__company,
+  .footer__nav {
+    padding-left: 3rem;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .footer__social-media {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__social-media-links {
+    justify-content: center;
+  }
+
+  .footer__copyrights {
+    margin: 0 0 2em;
+  }
+}

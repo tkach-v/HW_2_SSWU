@@ -1,0 +1,5 @@
+@mixin scale-and-colorize-item($scale: 1, $color: inherit, $bg-color: inherit) {
+  color: $color;
+  transform: scale($scale);
+  background-color: $bg-color;
+}
