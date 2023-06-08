@@ -1,0 +1,107 @@
+.destination__inner {
+  max-width: 1100px;
+  padding: 0 20px 186px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  &::before {
+    content: url("../img/destination/decore.svg");
+    position: absolute;
+    right: -42px;
+    bottom: calc(186px + 47px);
+  }
+}
+
+.destination__subtitle {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.destination__title {
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+.destination__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.destination__card {
+  position: relative;
+  max-width: 310px;
+  filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.1)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.03)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.025)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.02)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.016)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.01));
+  }
+}
+
+.destination__card-img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.destination__card-description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.25em;
+  color: #5E6282;
+  background: #FFFFFF;
+  padding: 27px 20px 42px 20px;
+  border-radius: 0 0 24px 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.destination__card-description-row-1 {
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.destination__card-description-row-2 {
+  font-size: 1rem;
+  position: relative;
+  padding-left: 32px;
+
+  &::before {
+    content: url("../img/destination/duration-icon.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+// do adaptive 
+@media (max-width: 992px) {
+  .destination {
+    position: relative;
+    &::before {
+      content: url("../img/destination/decore-mobile.svg");
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+  }
+
+  .destination__inner{
+    padding-bottom: 72px;
+    &::before {
+      display: none;
+    }
+  }
+
+  .destination__cards {
+    flex-direction: column;
+  }
+}

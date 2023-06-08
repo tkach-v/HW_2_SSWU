@@ -1,5 +1,4 @@
-@use "consts.scss" as consts;
-@use "mixins" as mixins;
+@use "mixins.scss" as mixins;
 
 @keyframes plane-animation {
   0% {
@@ -233,13 +232,6 @@
 .header__content-images {
   position: relative;
   width: 55%;
-
-  &:hover {
-    & .header__content-plane-left,
-    & .header__content-plane-right {
-      animation: plane-animation 3s forwards;
-    }
-  }
 }
 
 .header__content-main-image {
@@ -259,6 +251,10 @@
   top: 6%;
   left: 16%;
   z-index: 2;
+
+  &:hover {
+    animation: plane-animation 3s linear forwards;
+  }
 }
 
 .header__content-plane-right {
@@ -413,6 +409,15 @@
 
   .header__content {
     position: relative;
+    padding-bottom: 81px;
+
+    &::before {
+      content: url("../img/header/plus.svg");
+      position: absolute;
+      bottom: calc(92px + 15px);
+      left: 65%;
+      z-index: -1;
+    }
   }
 
   .header__content-mobile-plane {
@@ -420,14 +425,6 @@
     position: absolute;
     top: -20px;
     left: -20px;
-  }
-
-  .header__content-mobile-plus {
-    display: block;
-    position: absolute;
-    bottom: calc(92px + 15px);
-    left: 65%;
-    z-index: -1;
   }
 
   .header__content-desc {

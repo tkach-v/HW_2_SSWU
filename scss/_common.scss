@@ -1,0 +1,26 @@
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  color: #5E6282;
+}
+
+.title {
+  font-family: 'Volkhov', serif;
+  font-weight: 700;
+  font-size: 3.125rem;
+  line-height: 1.28em;
+  text-transform: capitalize;
+  color: #14183E;
+}
+
+@media (max-width: 992px) {
+  .services__subtitle {
+    font-size: 1.25rem;
+  }
+
+  .services__title {
+    font-size: 2.5rem;
+  }
+}

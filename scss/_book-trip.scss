@@ -1,0 +1,26 @@
+.book-trip__inner {
+  max-width: 1290px;
+  padding: 0 20px 200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  gap: 100px;
+}
+
+.book-trip__content {
+  flex: 0 0 40%;
+}
+
+.book-trip__subtitle {
+  margin-bottom: 0.8em;
+}
+
+.book-trip__title {
+  margin-bottom: 0.6em;
+}
+
+.book-trip__card-wrapper {
+  flex: 0 0 55%;
+}
+
