@@ -1,15 +1,16 @@
 .book-trip__inner {
-  max-width: 1290px;
-  padding: 0 20px 200px;
+  max-width: 1000px;
+  padding: 186px 135px 200px 20px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   display: flex;
-  gap: 100px;
+  justify-content: space-between;
+  gap: 118px;
 }
 
 .book-trip__content {
-  flex: 0 0 40%;
+  max-width: 515px;
 }
 
 .book-trip__subtitle {
@@ -20,7 +21,226 @@
   margin-bottom: 0.6em;
 }
 
+.book-trip__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.book-trip__step {
+  max-width: 395px;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.25em;
+  color: #5E6282;
+}
+
+.book-trip__step-title {
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+.book-trip__step-description {
+  font-weight: 400;
+}
+
 .book-trip__card-wrapper {
-  flex: 0 0 55%;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+}
+
+.main-card {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25em;
+  color: #84829A;
+  background: #FFFFFF;
+  box-shadow: 0 100px 80px rgba(0, 0, 0, 0.02), 0 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0 20px 13px rgba(0, 0, 0, 0.01), 0 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  border-radius: 26px;
+  max-width: 321px;
+  padding: 20px 24px 30px 24px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+
+    background: #59B1E6;
+    opacity: 0.8;
+    filter: blur(75px);
+  }
+}
+
+.main-card__image {
+  margin-bottom: 26px;
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 24px;
+}
+
+.main-card__title {
+  font-size: 1.125rem;
+  letter-spacing: 0.015em;
+  color: #080809;
+  margin-bottom: 0.7em;
+}
+
+.main-card__text {
+  margin-bottom: 1.3em;
+}
+
+.main-card__options {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.main-card__option {
+  text-decoration: none;
+}
+
+.main-card__desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-card__desc-text {
+  position: relative;
+  padding-left: 30px;
+  &::before {
+    content: url("../img/book-trip/building.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.secondary-card {
+  width: 218px;
+  background: #FFFFFF;
+  box-shadow: 0 100px 80px rgba(0, 0, 0, 0.02), 0 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0 20px 13px rgba(0, 0, 0, 0.01), 0 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  border-radius: 18px;
+  position: absolute;
+  z-index: 10;
+  bottom: 57px;
+  right: -115px;
+  padding: 16px 25px 22px 20px;
+  display: flex;
+  gap: 11px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.25em;
+}
+
+.secondary-card__image {
+  width: 50px;
+  height: 50px;
+}
+
+.secondary-card__status {
+  font-size: 0.875rem;
+  letter-spacing: -0.035em;
+  color: #84829A;
+  margin-bottom: 0.4em;
+}
+
+.secondary-card__title {
+  font-size: 18px;
+  letter-spacing: -0.015em;
+  color: #080809;
+  margin-bottom: 0.7em;
+}
+
+.secondary-card__complete-title {
+  font-size: 0.875rem;
+  letter-spacing: -0.055em;
+  color: #080809;
+  margin-bottom: 10px;
+}
+
+.secondary-card__complete-percent {
+  color: #8A79DF;
+}
+
+.secondary-card__complete-progress {
+  width: 156px;
+  height: 5px;
+  background: #F5F5F5;
+  border-radius: 30px;
+}
+
+.secondary-card__complete-progress-value {
+  width: 73px;
+  height: 5px;
+  background: #8A79DF;
+  border-radius: 30px;
+}
+
+// do adaptive
+@media (max-width: 992px) {
+  .book-trip__inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 73px 15px 86px 15px;
+    margin-bottom: 71px;
+    &::before {
+      content: url("../img/book-trip/decor-mobile-bottom.svg");
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      right: 0;
+    }
+    gap: 97px;
+  }
+
+  .book-trip__subtitle {
+    display: none;
+  }
+
+  .book-trip__content {
+    max-width: 100%;
+  }
+
+  .book-trip__title {
+    margin: 0;
+    padding-top: 120px;
+    padding-bottom: 70px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: url("../img/destination/decore-mobile.svg");
+      position: absolute;
+      z-index: -1;
+      top: -48px;
+      left: 0;
+    }
+  }
+
+  .book-trip__step {
+    max-width: 100%;
+  }
+
+  .book-trip__secondary-card {
+    display: none;
+  }
+
+  .main-card__image {
+    width: 100%;
+    height: auto;
+  }
 }
 
