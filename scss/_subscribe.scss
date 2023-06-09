@@ -130,7 +130,9 @@
     top: 0;
     left: 0;
     transform: none;
+
+    :hover {
+      transform: scale(1.1);
+    }
   }
-
-
 }

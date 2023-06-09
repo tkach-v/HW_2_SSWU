@@ -294,15 +294,17 @@
   transition: all 0.3s ease-in-out;
 }
 
-.toggler__btn::before {
-  content: '';
-  top: 6px;
+.toggler__btn {
+  &::before {
+    content: '';
+    top: 6px;
+  }
+  &::after {
+    content: '';
+    top: 12px;
+  }
 }
 
-.toggler__btn::after {
-  content: '';
-  top: 12px;
-}
 
 @media (max-width: 1250px) {
   .header__content-head {
