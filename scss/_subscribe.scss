@@ -1,0 +1,136 @@
+.subscribe__inner {
+  max-width: 1190px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 0 20px 70px;
+  margin-bottom: 95px;
+
+  &::before {
+    content: url("../img/subscribe/subscribe-decore.svg");
+    position: absolute;
+    right: -75px;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.subscribe__card {
+  background: rgba(223, 215, 249, 0.2);
+  border-radius: 129px 20px 20px 20px;
+  padding: 75px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: url("../img/subscribe/card-left-decore.svg");
+    position: absolute;
+    bottom: 0;
+    left: -90px;
+    z-index: -1;
+  }
+
+  &::after {
+    content: url("../img/subscribe/card-right-decore.svg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.subscribe__send-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70px;
+  width: 70px;
+  transform: translate(20%, -20%);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.subscribe__title {
+  max-width: 859px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.64em;
+  text-align: center;
+  color: #5E6282;
+  margin-bottom: 2.25em;
+}
+
+.subscribe__form {
+  display: flex;
+  gap: 38px;
+}
+
+.subscribe__input {
+  height: 68px;
+  width: 421px;
+  padding-left: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+  color: #39425D;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border: 0;
+}
+
+.subscribe__submit-btn {
+  height: 68px;
+  padding: 0 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.35em;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+  border-radius: 10px;
+  border: 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// do adaptive
+@media (max-width: 992px) {
+  .subscribe__inner::before,
+  .subscribe__card::before,
+  .subscribe__card::after,
+  .subscribe__title,
+  .subscribe__input {
+    display: none;
+  }
+
+  .subscribe__inner {
+    padding-bottom: 0;
+    margin-bottom: 58px;
+  }
+
+  .subscribe__card {
+    background: #FFFFFF;
+    padding: 0;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .subscribe__send-link {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+
+}

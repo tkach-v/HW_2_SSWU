@@ -95,6 +95,7 @@
   }
 
   .destination__inner{
+    padding: 0;
     &::before {
       display: none;
     }
@@ -102,5 +103,6 @@
 
   .destination__cards {
     flex-direction: column;
+    padding: 0 40px;
   }
 }
